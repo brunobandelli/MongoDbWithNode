@@ -1,0 +1,29 @@
+{
+  "name": "mongodbwithnode",
+  "version": "1.0.0",
+  "description": "Deep learning API Rest with Node and MongoDB",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunobandelli/MongoDbWithNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunobandelli/MongoDbWithNode/issues"
+  },
+  "homepage": "https://github.com/brunobandelli/MongoDbWithNode#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0"
+  }
+}
