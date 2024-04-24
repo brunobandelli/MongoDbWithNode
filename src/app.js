@@ -1,6 +1,6 @@
 import express from "express";
 import connectaNaDatabase from "./config/dbConnect.js";
-import livro from "./models/Livro.js"
+import routes from "./routes/index.js"
 
 const conexao = await connectaNaDatabase()
 
@@ -13,24 +13,25 @@ conexao.once("open", ()=>{
 })
 
 const app = express();
+routes(app);
 
-app.use(express.json()) //Middleware 
+// app.use(express.json()) //Middleware 
 
 
 
-app.get("/", (req, res)=>{
-    res.status(200).send("Curso de Node.js")
-})
+// app.get("/", (req, res)=>{
+//     res.status(200).send("Curso de Node.js")
+// })
 
-app.get("/livros", async (req, res)=> {
-    const listaLivros = await livro.find({})
-    res.status(200).json(listaLivros)
-})
+// app.get("/livros", async (req, res)=> {
+//     const listaLivros = await livro.find({})
+//     res.status(200).json(listaLivros)
+// })
 
-app.post("/livros", (req, res)=>{
-    livros.push(req.body)
-    res.status(201).send("Livro cadastrado com sucesso")
-})
+// app.post("/livros", (req, res)=>{
+//     livros.push(req.body)
+//     res.status(201).send("Livro cadastrado com sucesso")
+// })
 
 app.get("/livros/:id", (req, res)=>{
     const index = buscaLivro(req.params.id)
