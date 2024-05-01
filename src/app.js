@@ -33,22 +33,22 @@ routes(app);
 //     res.status(201).send("Livro cadastrado com sucesso")
 // })
 
-app.get("/livros/:id", (req, res)=>{
-    const index = buscaLivro(req.params.id)
-    res.status(200).json(livros[index])
-})
+// app.get("/livros/:id", (req, res)=>{
+//     const index = buscaLivro(req.params.id)
+//     res.status(200).json(livros[index])
+// })
 
-app.put("/livros/:id", (req, res) => {
-    const index = buscaLivro(req.params.id);
-    livros[index].titulo = req.body.titulo
-    res.status(200).json(livros);
-})
+// app.put("/livros/:id", (req, res) => {
+//     const index = buscaLivro(req.params.id);
+//     livros[index].titulo = req.body.titulo
+//     res.status(200).json(livros);
+// })
 
-app.delete("/livros/:id", (req, res) => {
-    const index = buscaLivro(req.params.id);
-    livros.splice(index, 1);
-    res.status(200).send("Livro removido com sucesso");
-});
+// app.delete("/livros/:id", (req, res) => {
+//     const index = buscaLivro(req.params.id);
+//     livros.splice(index, 1);
+//     res.status(200).send("Livro removido com sucesso");
+// });
 
 //Todas as vezes que chega um objeto via body via requisição eles chegam como string
 //201 registro criado
